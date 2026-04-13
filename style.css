@@ -9,7 +9,7 @@ body {
     margin: 30px auto 0;
     padding: 0 20px;
 }
-
+/*header*/
 span {
     color: orange;
 }
@@ -56,3 +56,23 @@ span {
     padding: 8px 12px;
     width: 240px;
 }
+/*header*/
+
+/*Body main*/
+.main{
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 60px;
+}
+
+.main-text h1{
+    font-size: 68px;
+    margin-bottom: 20px;
+    
+}
+
+.second-text p{
+    color: gray;
+    font-size: 28px;
+}
+/*Body main*/
