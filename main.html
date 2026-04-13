@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KinoPoisk</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f2f2f4;
+      color: #1f2430;
+    }
+
+    .container {
+      width: 1200px;
+      max-width: 95%;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-top: 25px;
+    }
+
+    .navbar {
+      background: white;
+      border-radius: 10px;
+      padding: 18px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: orange;
+    }
+
+    .menu {
+      display: flex;
+      gap: 50px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #324c9c;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      color: orange;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+    }
+
+    .search-box input {
+      width: 280px;
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-right: none;
+      border-radius: 8px 0 0 8px;
+      outline: none;
+      font-size: 16px;
+    }
+
+    .search-box button {
+      padding: 12px 18px;
+      border: none;
+      background: #4b83f5;
+      color: white;
+      font-size: 18px;
+      border-radius: 0 8px 8px 0;
+      cursor: pointer;
+    }
+
+    .hero {
+      text-align: center;
+      margin-top: 90px;
+      margin-bottom: 60px;
+    }
+
+    .hero h1 {
+      font-size: 68px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 28px;
+      color: #6f7480;
+    }
+
+    .content {
+      display: flex;
+      gap: 35px;
+      align-items: flex-start;
+      margin-top: 40px;
+    }
+
+    .mockup {
+      flex: 1.1;
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      min-height: 480px;
+    }
+
+    .browser-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ff605c;
+    }
+
+    .dot:nth-child(2) {
+      background: #ffbd44;
+    }
+
+    .dot:nth-child(3) {
+      background: #00ca4e;
+    }
+
+    .browser-line {
+      flex: 1;
+      height: 18px;
+      background: #eef1f7;
+      border-radius: 8px;
+      margin-left: 10px;
+    }
+
+    .poster {
+      width: 100%;
+      height: 180px;
+      background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .skeleton-title {
+      width: 70%;
+      height: 22px;
+      background: #e9edf5;
+      border-radius: 8px;
+      margin-bottom: 14px;
+    }
+
+    .skeleton-text {
+      width: 100%;
+      height: 15px;
+      background: #eef1f7;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .skeleton-text.short {
+      width: 65%;
+    }
+
+    .features {
+      flex: 1.4;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .feature-row {
+      display: flex;
+      gap: 28px;
+    }
+
+    .card {
+      flex: 1;
+      background: white;
+      border-radius: 16px;
+      padding: 40px 30px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      min-height: 250px;
+    }
+
+    .card.big {
+      min-height: 180px;
+    }
+
+    .icon {
+      font-size: 48px;
+      color: #6da0ff;
+      margin-bottom: 25px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .card p {
+      color: #757b86;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 35px;
+      margin-bottom: 50px;
+    }
+
+    .cta button {
+      background: #4b83f5;
+      color: white;
+      border: none;
+      padding: 18px 40px;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(75, 131, 245, 0.3);
+    }
+
+    .cta button:hover {
+      background: #376fe0;
+    }
+
+    @media (max-width: 992px) {
+      .navbar {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .content {
+        flex-direction: column;
+      }
+
+      .feature-row {
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero p {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 28px;
+      }
+
+      .search-box input {
+        width: 180px;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="navbar">
+        <div class="logo">Kino<span>Poisk</span></div>
+
+        <nav class="menu">
+          <a href="#">Главная</a>
+          <a href="#">Фильмы</a>
+          <a href="#">Сериалы</a>
+          <a href="#">Мультфильмы</a>
+        </nav>
+
+        <div class="search-box">
+          <input type="text" placeholder="Введите запрос" />
+          <button>🔍</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>О KinoPoisk</h1>
+      <p>Все о кино, сериалах и мультфильмах</p>
+    </section>
+
+    <section class="content">
+      <div class="mockup">
+        <div class="browser-top">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="browser-line"></div>
+        </div>
+
+        <div class="poster"></div>
+        <div class="skeleton-title"></div>
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text short"></div>
+        <br>
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text short"></div>
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text"></div>
+      </div>
+
+      <div class="features">
+        <div class="feature-row">
+          <div class="card">
+            <div class="icon">🔎</div>
+            <h3>Огромная база данных</h3>
+            <p>Миллионы фильмов, сериалов и мультфильмов в одной базе</p>
+          </div>
+
+          <div class="card">
+            <div class="icon">⭐</div>
+            <h3>Рейтинги и отзывы</h3>
+            <p>Актуальные рейтинги и отзывы пользователей о кино</p>
+          </div>
+        </div>
+
+        <div class="card big">
+          <div class="icon">🟦</div>
+          <h3>Подборки и рекомендации</h3>
+          <p>Персонализированные подборки и рекомендации фильмов</p>
+        </div>
+
+        <div class="cta">
+          <button>Начать пользоваться</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

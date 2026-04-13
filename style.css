@@ -3,6 +3,56 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.container {
+    width: 1200px;
+    max-width: 95%;
+    margin: 30px auto 0;
+    padding: 0 20px;
+}
+
 span {
     color: orange;
+}
+
+.navbar {
+    background: white; /*Задает белый фон блоку*/
+    border-radius: 10px;  /*Закругляет углы, 10пх = мягкие, современные углы*/
+    padding: 18px 30px;  /*Внутренние отступы. 18пх - сверху и снизу, 30пх - слева и справа*/
+    display: flex;  /*Включает флексбокс, все элементы внутри становятся в одну линию*/
+    align-items: center;  /*Выравнивает элементы по вертикали*/
+    justify-content: space-between;  /*Раскидывает элементы по горизотали*/
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);  /*Добавляет тень:
+    0 - смещение по Х(влево/вправо)
+    4пх - вниз
+    15пх - размытие
+    rgba(0,0,0,0.15) - цвет*/
+}
+
+.header-logo {
+    font-size: 30px;
+    font-weight: bold;
+    min-width: 220px; /*Минимальная ширина элемента, элемент не станет уже, чем я указал*/
+}
+
+.header-menu {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex: 1;
+}
+
+.header-menu a {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.input {
+    min-width: 220px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search {
+    padding: 8px 12px;
+    width: 240px;
 }
