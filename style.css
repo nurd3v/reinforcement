@@ -9,7 +9,7 @@ body {
     margin: 30px auto 0;
     padding: 0 20px;
 }
-/*header*/
+/*header-start*/
 span {
     color: orange;
 }
@@ -56,9 +56,9 @@ span {
     padding: 8px 12px;
     width: 240px;
 }
-/*header*/
+/*header-finished*/
 
-/*Body main*/
+/*Body main-start*/
 .main{
     text-align: center;
     margin-top: 90px;
@@ -75,4 +75,64 @@ span {
     color: gray;
     font-size: 28px;
 }
-/*Body main*/
+
+.card{
+    margin-top: 40px;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.card-row{
+    display: flex;
+    gap: 28px;
+
+}
+
+.shadow1{
+    flex: 1;
+    background: white;
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    min-height: 250px;
+}
+
+.shadow2{
+    flex: 1;
+    background: white;
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    min-height: 250px;
+}
+
+.icon{
+    font-size: 48px;
+    color: #6da0ff;
+    margin-bottom: 25px;
+}
+
+.shadow1 h2{
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.shadow2 h2{
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.shadow1 p{
+    color: #757b86;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.shadow2 p{
+    color: #757b86;
+    font-size: 16px;
+    line-height: 1.6;
+}
+/*Body main-finished*/
