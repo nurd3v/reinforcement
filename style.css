@@ -168,4 +168,19 @@ span {
     font-size: 16px;
     line-height: 1.6;
 }
+
+.btn{
+    padding: 18px 30px;
+    background-color:blueviolet;
+    border-radius: 18px;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn span{
+    color: #f0f0f0;
+    font-weight: bold;
+}
+
+
 /*Body main-finished*/
