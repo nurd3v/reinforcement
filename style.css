@@ -143,13 +143,13 @@ span {
 }
 
 .width{
-    flex: 1;
     background: white;
     border-radius: 16px;
-    padding: 40px 30px;
+    padding: 50px 30px;
     text-align: center;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    min-height: 250px;
+
+    margin-top: 20px;
 }
 
 .width-icon{
