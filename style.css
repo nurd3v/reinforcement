@@ -52,6 +52,11 @@ span {
     justify-content: flex-end;
 }
 
+.searcher{
+    border-radius: 4px solid white;
+    background-color: #6da0ff;
+}
+
 .search {
     padding: 8px 12px;
     width: 240px;
@@ -173,8 +178,9 @@ span {
     padding: 18px 30px;
     background-color:blueviolet;
     border-radius: 18px;
-    display: block;
-    margin: 0 auto;
+    border: solid white;
+    display: block; /* Поставил блок кнопки по середине сайта*/
+    margin: 0 auto; /* Поставил блок кнопки по середине сайта*/
 }
 
 .btn span{
