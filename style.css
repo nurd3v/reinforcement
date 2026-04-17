@@ -237,3 +237,45 @@ span {
     height: 220px;
     object-fit: cover;
 }
+
+.email{
+    background: white;
+    border-radius: 16px;
+    padding: 25px 50px;
+    margin-top: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .email-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.movie-icon{
+    font-size: 40px;
+}
+
+.email-text{
+    display: flex;
+    flex-direction: column; /* ВАЖНО */
+}
+
+.email-left h3 {
+    margin: 0;
+}
+
+.email-left p {
+    margin: 0;
+    color: gray;
+}
+
+.email-input{
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    width: 220px;
+}
