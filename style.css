@@ -1,4 +1,5 @@
 body {
+    margin: 0;
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
 }
@@ -280,3 +281,60 @@ span {
     width: 220px;
 }
 
+.footer{
+    background: #1f2430;
+    color: whitesmoke;
+    margin-top: 60px;
+    padding: 40px 0;
+    width: 100%;
+    font-size: 13px
+}
+
+.footer-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* чтобы не ломалось на маленьком экране */
+    gap: 40px;
+}
+
+.footer-col h3{
+    font-size: 25px;
+}
+
+.footer-icon img{
+    width: 35px;
+    height: 35px;
+}
+
+.footer-container a{
+    text-decoration: none;
+    font-size: 13px;
+    color: whitesmoke;
+}
+
+.footer-col1{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-col2{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-col3{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-col4{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
