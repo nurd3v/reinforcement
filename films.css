@@ -45,6 +45,7 @@ span {
 .header-menu a {
     font-size: 18px;
     text-decoration: none;
+    color:#6a0dad;
 }
 
 .input {
@@ -61,4 +62,22 @@ span {
 .search {
     padding: 8px 12px;
     width: 240px;
+}
+
+.janr{
+    display: flex;
+    margin-top: 30px;
+    gap: 10px;
+    flex-wrap: wrap
+}
+
+.janr button{
+    background: white; /*Задает белый фон блоку*/
+    border-radius: 10px;  /*Закругляет углы, 10пх = мягкие, современные углы*/
+    padding: 5px 10px;  /*Внутренние отступы. 18пх - сверху и снизу, 30пх - слева и справа*/
+    display: flex;  /*Включает флексбокс, все элементы внутри становятся в одну линию*/
+    align-items: center;  /*Выравнивает элементы по вертикали*/
+    justify-content: space-between;  /*Раскидывает элементы по горизотали*/
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-color: black;
 }
