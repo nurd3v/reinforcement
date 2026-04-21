@@ -80,4 +80,24 @@ span {
     justify-content: space-between;  /*Раскидывает элементы по горизотали*/
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     border-color: black;
+    cursor: pointer;
+}
+
+.main-films h2{
+    margin
+}
+
+.film-cards{
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    width: 200px;
+}
+
+.film-cards a{
+    text-decoration: none;
+    color: black;
 }
